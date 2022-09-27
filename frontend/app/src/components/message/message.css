@@ -1,0 +1,41 @@
+.message{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left:2rem;
+    margin-bottom: 2rem;
+}
+.message.own{
+    margin-left:12em;
+}
+
+.messagetxt{
+    border:0.5px solid black;
+    border-radius:50px;
+    padding:10px;
+    width:100%;
+    font-size: 1.5rem;
+    font-weight:500;
+    background-color: rgb(241, 245, 243);
+    color:black;
+}
+
+.message.own .messagetxt{
+border:0.5px solid black;
+border-radius:50px;
+padding:10px;
+width:100%;
+font-size: 1.5rem;
+font-weight:500;
+background-color: rgba(62, 49, 185, 0.815);
+color:black;
+}
+
+.timeago{
+display: flex;
+width:50%;
+font-size: 1.3rem;
+color:black;
+font-weight:300;
+margin-left: 6rem;
+}

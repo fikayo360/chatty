@@ -1,0 +1,295 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Bungee+Inline&family=Dancing+Script:wght@700&family=Lato&family=Merienda+One&family=Montserrat+Alternates&family=Ole&family=Roboto&family=Rubik+Glitch&family=Rubik+Puddles&family=Russo+One&family=Send+Flowers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.wrapper{
+    display:flex;
+    width:100vw;
+    height:100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;    
+}
+
+.hleft {
+    flex: 1;
+    margin:0;
+}
+.center{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    border-left: 0.3px solid rgb(212, 210, 210);
+    border-right: 0.3px solid rgb(212, 210, 210);
+}
+.hright{
+    flex: 1;
+    margin:0;
+    width:100vw;
+    height:100vh;
+}
+
+.top{
+    width: 100%;
+    height: 82%;
+    padding-top: 5px;
+    overflow: auto;
+}
+
+
+.chatBoxBottom {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 4rem;
+    background-color: #ffff;
+    margin-bottom: 4.5rem;
+  }
+  
+  
+  .chatMessageInput {
+    width: 65%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left:40px;
+  }
+
+  .chatMessageInput::placeholder{
+    font-size: 1.3rem;
+  }
+  
+  .chatSubmitButton {
+    width: 100px;
+    height: 3.5rem;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(23, 7, 169);
+    color: white;
+    font-weight: bold;
+  }
+  
+  .chatSubmitButton:hover{
+    color:black
+  }
+
+  #hlefttxt,#hrighttxt{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    position: absolute;
+  }
+
+  .homecontainer{
+    position: relative;
+  }
+
+  .overlayn{
+    display: none;
+  }
+
+  .onlinen, #messageback{
+    display: none;
+  }
+
+  #nfy, #nuo,#noconvo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(13, 64, 119);
+  }
+
+  #nfy{
+    margin-bottom: 2rem;
+  }
+
+  #nocon{
+    width: 100vw;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .noconvoo{
+    width:100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  #noconvo{
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: rgb(35, 77, 122);
+  }
+
+  #mconvo{
+   width: 100%;
+   height: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+
+  #sfriends{
+    width: 8rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #ffff;
+    background-color: rgb(20, 7, 14);
+    cursor: pointer;
+  }
+
+  #nuod{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    margin-top: 3rem;
+  }
+
+  
+  @media only screen and (max-width: 768px) {
+   .center,.hright{
+    display:none;
+   }
+   .hleft{
+    width: 100%;
+    height: 100%;
+   }
+   .overlayheader{
+    display:flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(199, 196, 196);
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+   }
+   #overlayheadertxt{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    font-family: 'Luckiest Guy', cursive;
+   }
+   #overlayicon{
+    width:40px;
+    height:40px;
+    margin-right: 1rem;
+    cursor:pointer;
+   }
+
+   .overlayh{
+    width: 100vw;
+    height:100vh;
+    position: absolute;
+    background-color: #ffff;
+    z-index: 2;
+}
+
+.onlineo{
+  width: 100vw;
+  height:100vh;
+  position: absolute;
+  background-color: #ffff;
+  z-index: 3;
+}
+
+#onlineimg{
+  width:30px;
+  height:40px;
+  margin-left: 1rem;
+  margin-top: 0.8rem;
+}
+
+  .overlaybody li {
+    position: relative;
+    display:flex;
+    align-items: center;
+    width:90%;
+    height:4rem;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .overlaybody li img {
+    width:40px;
+    height: 40px;
+    margin-right:2.5rem;
+  }
+
+  .overlaybody li a {
+   text-decoration: none;
+   color:black
+  }
+
+  .overlaybodyitems{
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .overlaybodyimg {
+    width:50px;
+    height:50px;
+  }
+
+  #nnum{
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color:#ffff;
+    background-color: rgb(103, 4, 103);
+    font-weight: bold;
+    width:25px;
+    height:25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    right:30px;
+    top:9px
+  }
+  .active{
+    display: flex;
+  }
+  .notactive{
+    display: none;
+  }
+  #messageback{
+    display: block;
+    width:30px;
+    height:30px;
+    margin-top: 10px;
+    margin-left: 1rem;
+  }
+  
+  .message{
+    width:50%;
+    margin-left: 12em;
+  }
+  
+.timeago{
+  width:100%;
+  font-size: 1rem;
+  margin-left: 5rem;
+}
+.chatSubmitButton{
+  margin-right: 1rem;
+}
+#noconvo{
+  font-size: 1rem;
+}
+}

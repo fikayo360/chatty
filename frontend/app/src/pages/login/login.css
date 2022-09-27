@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Dancing+Script:wght@700&family=Lato&family=Merienda+One&family=Montserrat+Alternates&family=Ole&family=Roboto&family=Rubik+Glitch&family=Rubik+Puddles&family=Russo+One&family=Send+Flowers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.lcontainer{
+    display:flex;
+    position:relative;
+    justify-content: space-between;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    font-size:16px;
+    background-color: black;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    background: #673AB7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #512DA8, #673AB7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #512DA8, #673AB7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    border-radius: 76% 64% 77% 0% / 0% 0% 97% 100% 
+}
+
+#left-para{
+    font-size:1.7rem;
+    font-weight: bold;
+    color:rgb(11, 11, 11);
+    margin-left: 2rem;
+}
+
+.left-top{
+    width:70%;
+    margin-right: 13rem;
+}
+
+.left-bottom{
+    width: 100%;
+    margin-left: 1rem;
+}
+
+#firstheading{
+    font-size: 10rem;
+    font-weight: bold;
+    font-family: 'Luckiest Guy', cursive;
+    color:black
+}
+
+.right{
+    width:40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 76% 64% 0% 100% / 0% 0% 97% 100%;
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.formwrap{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:80%;
+    height:60%;
+    margin-left: 10rem;
+}
+
+.forminput{
+    width:85%;
+    height:2rem;
+    border: none;
+    color:black;
+    background-color: rgba(246, 246, 243, 0);
+    padding:5px;
+    font-weight:bold;
+    font-size: 1rem;
+    border-bottom: 0.6px solid rgb(24, 24, 24);
+    margin-bottom: 18px;
+}
+
+.forminput:focus{
+    outline: none;
+}
+
+.forminput::placeholder {
+    font-size:1.2rem;
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.btnwrap{
+    width:87%;
+    display:flex;
+    justify-content: center;
+    position: relative;
+}
+
+#loginbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:3rem;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    background-color: rgb(3, 6, 18);
+    color:rgb(228, 226, 224);
+    cursor:pointer;
+    border:1px solid black;
+    padding-right: 20px;
+}
+
+#loginbtn:hover{
+    color:rgb(63, 61, 61)
+}
+
+#lmobheader{
+    display: none;
+}
+
+
+
+ @media only screen and (max-width: 768px) {
+    .left{
+        display: none;
+        position: relative;
+    }
+    .right{
+        width:100%;
+    }
+    .formwrap {
+        width: 77%;
+        height: 50%;
+        margin-bottom: 9rem;
+        margin-left: 1.5rem;
+    }
+
+    .forminput {
+        width: 88%;
+        margin-bottom: 20px;
+    }
+    .forminput::placeholder{
+        font-size: 2rem;
+    }
+
+    #loginbtn{
+        width: 100%;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        background-color: rgb(3, 6, 18);
+        color: rgb(228, 226, 224);
+        cursor: pointer;
+        border: 1px solid black;
+        }
+
+    .btnwrap {
+        width: 90%;
+    }
+
+    #lmobheader{
+        display: flex;
+        width:95%;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 3rem;
+    }
+    #lmobheadertxt{
+        font-size: 2rem;
+        margin-left: 15px;
+        font-weight: bold;
+        font-family: 'Luckiest Guy', cursive;
+    }
+    #lmobheaderlink {
+        font-size: 2rem;
+        margin-right: 15px;
+    }
+    #lmobheaderlink:hover{
+        color:rgb(153, 43, 43)
+    }
+}

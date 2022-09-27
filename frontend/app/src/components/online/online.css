@@ -1,0 +1,31 @@
+.onlinefriendscont{
+    display:flex;
+    align-items: center;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.onlinefriendimg{
+    width:50px;
+    height:50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.onlinefriendname{
+    margin-left: 2rem;
+    font-size: 1.3rem;
+}
+.imgcont{
+    position: relative;
+}
+.greendot{
+    position: absolute;
+    border-radius: 50%;
+    top:0;
+    right:0;
+    width: 17px;
+    height:18px;
+    background-color: rgba(6, 46, 16, 0.987);
+}

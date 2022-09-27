@@ -1,0 +1,13 @@
+.notfound{
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 33, 33);
+}
+
+.notfound .notfoundtxt {
+    font-size: 5rem;
+    color:purple
+}
