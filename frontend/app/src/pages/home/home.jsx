@@ -222,7 +222,8 @@ const Home = () => {
                     <Friend key={conversation._id} conversation={conversation} currentuser={user} />
                     </div>
                 ))):(<div className="noconvoo">
-                    <span id="nfy"> no friends yet you can find them here </span>
+                     <img id="notimg" src="illustrations/reading.png"/>
+                    <span id="nfy"> no friends yet you can find some here </span>
                     <Link to="/findfriend"><button id="sfriends">search friends</button></Link>
                     </div>)}
             </div>
@@ -230,11 +231,11 @@ const Home = () => {
             <div ref={centerRef} className="center">
             <div className="top">
             <img src="icons/left.png" id="messageback" className="active" onClick={closemessage}/>
-                {messages.length ?messages.map((message)=>(
+                {messages.map((message)=>(
                     <div>
                     <Message key={message._id} message={message} own={message.sender === user._id} />
                     </div>
-                )):(<div id="mconvo"><span id="noconvo"> hello click on a conversation to get started </span></div>)}
+                ))}
             </div>
             <div className="chatBoxBottom">
                   <textarea className="chatMessageInput" placeholder="HI THERE" 
@@ -248,7 +249,7 @@ const Home = () => {
             <span id="hrighttxt">online</span>
             {online.length? (online.map(user=>(
             <Online key={user._id} user={user} />
-            ))):(<div id="nuod"><span id="nuo">no user online</span></div>
+            ))):(<div id="nuod"><span id="nuo">no users online</span></div>
             )}
             </div>
             </div>

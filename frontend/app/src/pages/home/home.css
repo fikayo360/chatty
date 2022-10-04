@@ -102,7 +102,7 @@
   }
 
   #nfy, #nuo,#noconvo {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: rgb(13, 64, 119);
   }
@@ -111,6 +111,11 @@
     margin-bottom: 2rem;
   }
 
+  #notimg{
+   width:250px;
+   height:250px;
+   margin-bottom: 2rem;
+  }
   #nocon{
     width: 100vw;
     height: 50%;
@@ -145,10 +150,14 @@
   #sfriends{
     width: 8rem;
     height: 3rem;
-    font-size: 1rem;
+    font-size: 12px;
+    border-radius: 5px;
     color: #ffff;
     background-color: rgb(20, 7, 14);
     cursor: pointer;
+  }
+  #sfriends:hover{
+    color: rgb(184, 44, 130);
   }
 
   #nuod{

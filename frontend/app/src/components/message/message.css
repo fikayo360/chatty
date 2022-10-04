@@ -6,7 +6,7 @@
     margin-bottom: 2rem;
 }
 .message.own{
-    margin-left:12em;
+    margin-left:22rem;
 }
 
 .messagetxt{
@@ -38,4 +38,13 @@ font-size: 1.3rem;
 color:black;
 font-weight:300;
 margin-left: 6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .message{
+        margin-left:2rem;
+    }
+    .message.own{
+        margin-left:12rem;
+    }
 }
