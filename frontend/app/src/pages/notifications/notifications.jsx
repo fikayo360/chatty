@@ -16,7 +16,7 @@ const Notifications = () => {
     
     
     useEffect(()=>{
-        socket.current = io("ws://localhost:8900");
+        socket.current = io("https://fksocialws.onrender.com");
         },[])
 
         useEffect(()=>{
@@ -36,7 +36,7 @@ const Notifications = () => {
 
         const getNotifications = async() => {
             try{
-                const res = await axios.get('http://localhost:5000/api/v1/notifications/all/' + user._id)
+                const res = await axios.get('https://fksocial.onrender.com/api/v1/notifications/all/' + user._id)
                 console.log(res)
                 setnots(res.data)
             }catch(err){

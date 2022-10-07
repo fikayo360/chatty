@@ -26,12 +26,12 @@ const Profile = () => {
     axios.defaults.headers.common['Authorization']  = `Bearer ${token}`
 
     useEffect(()=>{
-        socket.current = io("ws://localhost:8900")
+        socket.current = io("https://fksocialws.onrender.com")
         },[])
         
     const getprofile = async() => {
         try{
-            const response = await axios.get('http://localhost:5000/v1/user/profile')
+            const response = await axios.get('https://fksocial.onrender.com/v1/user/profile')
             setuser(response.data.userdetails)
             setfirst(response.data.userdetails.username)
             setfollowing(response.data.userfriends)
@@ -53,9 +53,9 @@ const Profile = () => {
           }
 
         try{
-            const response = await axios.post('http://localhost:5000/v1/user/removefriend/' + friendid)
+            const response = await axios.post('https://fksocial.onrender.com/v1/user/removefriend/' + friendid)
             if(response.status === 200){
-                const createNotification = await axios.post('http://localhost:5000/api/v1/notifications/add',payload)
+                const createNotification = await axios.post('https://fksocial.onrender.com/api/v1/notifications/add',payload)
                 console.log(createNotification.data)
                 socket.current.emit("sendnotification", {
                     message: `${userr.username} unfollowed you`,

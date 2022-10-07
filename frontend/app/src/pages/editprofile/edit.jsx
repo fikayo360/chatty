@@ -56,7 +56,7 @@ const Editprofile = () => {
                     dispatch(updateprofile({city,profilepic,sex,relationship}))
                     const payload = { city, profilepic,sex,relationship };
                     console.log(payload)
-                     axios.post('http://localhost:5000/v1/user/completeprofile',payload).then((response)=>{
+                     axios.post('https://fksocial.onrender.com/v1/user/completeprofile',payload).then((response)=>{
                         setsex("")
                         setrelationship("")
                         setcity("")

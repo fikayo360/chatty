@@ -27,13 +27,13 @@ const Finduser = () => {
         }
 
         useEffect(()=>{
-            socket.current = io("ws://localhost:8900")
+            socket.current = io("https://fksocialws.onrender.com")
             },[])
         
         const found = async() => {
             const formdata = {username}
             try{
-            const res = await axios.post('http://localhost:5000/v1/user/search',formdata)
+            const res = await axios.post('https://fksocial.onrender.com/v1/user/search',formdata)
             console.log(res)
             setfusername(res.data.others.username)
             setfpic(res.data.others.profilepic)
@@ -54,9 +54,9 @@ const Finduser = () => {
       }
       
         try{
-            let res = await axios.post('http://localhost:5000/v1/user/addfriend/' + friendid)
+            let res = await axios.post('https://fksocial.onrender.com/v1/user/addfriend/' + friendid)
             console.log(res.data)
-            const createNotification = await axios.post('http://localhost:5000/api/v1/notifications/add',payload)
+            const createNotification = await axios.post('https://fksocial.onrender.com/api/v1/notifications/add',payload)
             socket.current.emit("sendnotification", {
                 message: `${user.username} followed you`,
                 individualpic: user.profilepic,

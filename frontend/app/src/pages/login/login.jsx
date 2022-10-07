@@ -40,7 +40,7 @@ const Login = () => {
         }
             try{
             let formdata =  {username,password}
-            const res = await axios.post("http://localhost:5000/v1/user/login",formdata)
+            const res = await axios.post("https://fksocial.onrender.com/v1/user/login",formdata)
             setLoading(false)
             const {email,_id,createdAt,friends,city,relationship,profilepic,sex} = res.data.others
             dispatch(update({username,email,_id,friends,createdAt,city,relationship,profilepic,sex}))

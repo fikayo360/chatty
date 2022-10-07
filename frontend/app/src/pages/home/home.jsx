@@ -38,7 +38,7 @@ const Home = () => {
     
 
     useEffect(() => {
-        socket.current = io("ws://localhost:8900");
+        socket.current = io("https://fksocialws.onrender.com");
          socket.current.on("getMessage",(data) => {
             console.log(data)
             setArrivals({
@@ -60,7 +60,7 @@ const Home = () => {
       const refresh = async() => {
         const formdata = {username}
         try{
-            const res = await axios.post('http://localhost:5000/v1/user/search',formdata)
+            const res = await axios.post('https://fksocial.onrender.com/v1/user/search',formdata)
             const {email,_id,createdAt,friends,city,relationship,profilepic,sex} = res.data.others
             dispatch(update({username,email,_id,friends,createdAt,city,relationship,profilepic,sex}))
         }catch(err){
@@ -87,7 +87,7 @@ const Home = () => {
 
     const getconversations = async() => {
         try{
-            const res = await axios.get('http://localhost:5000/api/v1/conversation/allconvo')
+            const res = await axios.get('https://fksocial.onrender.com/api/v1/conversation/allconvo')
             setconversations(res.data)
         }catch(err){
             console.log(err.response.data)
@@ -97,7 +97,7 @@ const Home = () => {
     const getonlineusers = async()=>{
         try{
             let data = {onlineusers}
-            const res = await axios.post('http://localhost:5000/v1/user/online',data)
+            const res = await axios.post('https://fksocial.onrender.com/v1/user/online',data)
             setonline(res.data)
         }catch(err){
             console.log(err.response.data)
@@ -115,7 +115,7 @@ const Home = () => {
       const getMessages = async () => {
         let conversationid = currentChat?._id
     try {
-        const res = await axios.get('http://localhost:5000/api/v1/messages/' + conversationid);
+        const res = await axios.get('https://fksocial.onrender.com/api/v1/messages/' + conversationid);
         setmessages(res.data);
     } catch (err) {
         console.log(err);
@@ -146,7 +146,7 @@ const Home = () => {
         });
         
         try {
-        const res = await axios.post('http://localhost:5000/api/v1/messages/add', message);
+        const res = await axios.post('https://fksocial.onrender.com/api/v1/messages/add', message);
         setmessages([...messages, res.data]);
         setnewMessage("");
         } 

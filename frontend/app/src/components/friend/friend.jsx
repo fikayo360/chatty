@@ -11,7 +11,7 @@ const Friend = ({conversation,currentuser}) => {
 
     const getconversationfriend = async () => {
         try{
-            const res = await axios.post('http://localhost:5000/v1/user/getConversationfriend',{friendid})
+            const res = await axios.post('https://fksocial.onrender.com/v1/user/getConversationfriend',{friendid})
             console.log(res.data.others)
             setuser(res.data.others)
             setfirstchar(res.data.others.username)

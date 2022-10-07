@@ -39,7 +39,7 @@ const Register = () => {
         }
             try{
             let formdata =  {username,email,password}
-            const res = await axios.post("http://localhost:5000/v1/user/signup",formdata)
+            const res = await axios.post("https://fksocial.onrender.com/v1/user/signup",formdata)
             setLoading(false)
             console.log(res.data)
             localStorage.setItem('token',res.data.token)
