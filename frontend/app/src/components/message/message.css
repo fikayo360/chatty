@@ -4,40 +4,35 @@
     width: 40%;
     margin-left:2rem;
     margin-bottom: 2rem;
+    padding: 5px;
 }
 .message.own{
     margin-left:22rem;
 }
 
 .messagetxt{
+    overflow: auto;
     border:0.5px solid black;
     border-radius:50px;
-    padding:10px;
+    padding:12px;
     width:100%;
-    font-size: 1.5rem;
+    font-size: 12px;
     font-weight:500;
-    background-color: rgb(241, 245, 243);
     color:black;
+    background-color: rgba(141, 137, 180, 0.815);
 }
 
-.message.own .messagetxt{
-border:0.5px solid black;
-border-radius:50px;
-padding:10px;
-width:100%;
-font-size: 1.5rem;
-font-weight:500;
+.message.own .messagetxt {
 background-color: rgba(62, 49, 185, 0.815);
-color:black;
 }
 
 .timeago{
 display: flex;
 width:50%;
-font-size: 1.3rem;
+font-size: 10px;
 color:black;
 font-weight:300;
-margin-left: 6rem;
+margin-left: 13rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -47,4 +42,12 @@ margin-left: 6rem;
     .message.own{
         margin-left:12rem;
     }
+
+    .message.own .messagetxt{
+        font-size: 15px;
+    }
+
+    .timeago{
+        margin-left: 7rem;
+        }
 }

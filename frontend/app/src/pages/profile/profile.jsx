@@ -39,9 +39,10 @@ const Profile = () => {
             console.log(err)
         }
     }
+
     useEffect(()=>{
         getprofile()
-    },[])
+    },[following])
    
     // unfollow by id 
     const unfollow = async(friendid) => {
@@ -66,7 +67,7 @@ const Profile = () => {
             dispatch(removefriend(friendid))
             console.log(friends.length)
             setnotification(response.data)
-            following.filter(item => item._id !== friendid)
+            setfollowing(following.filter(item => item._id !== friendid))
             getprofile()
         }catch(err){
              setnotification(err.response)

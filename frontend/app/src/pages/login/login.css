@@ -137,16 +137,13 @@ background: linear-gradient(to right, #512DA8, #673AB7); /* W3C, IE 10+/ Edge, F
     .formwrap {
         width: 77%;
         height: 50%;
-        margin-bottom: 9rem;
+        margin-bottom: 6rem;
         margin-left: 1.5rem;
     }
 
     .forminput {
         width: 88%;
         margin-bottom: 20px;
-    }
-    .forminput::placeholder{
-        font-size: 2rem;
     }
 
     #loginbtn{

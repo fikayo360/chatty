@@ -192,7 +192,7 @@ background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, F
     .rformwrap {
         width: 77%;
         height: 50%;
-        margin-bottom: 9rem;
+        margin-bottom: 6rem;
         margin-left: 1.5rem;
     }
     .rforminput {
