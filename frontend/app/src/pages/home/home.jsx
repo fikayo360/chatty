@@ -8,6 +8,7 @@ import Online from "../../components/online/online"
 import { io } from "socket.io-client";
 import { useRef } from "react"
 import { useDispatch,useSelector } from "react-redux";
+import { clearnots } from "../../redux/notifications";
 import {update,clearall} from "../../redux/userRedux"
 import axios from "axios"
 import { addnotification } from "../../redux/notifications";
@@ -187,6 +188,10 @@ const Home = () => {
         dispatch(clearall())
     }
 
+    const clearnotifications = () => {
+        dispatch(clearnots())
+    }
+
     return (
         <div className="homecontainer">
         <div className={over === true?"overlayh":"overlayn"} >
@@ -197,7 +202,7 @@ const Home = () => {
             <div className="overlaybody">
                 <ul>
                     <li><Link  to="/findfriend"> <span className="overlaybodyitems">SEARCH</span>  </Link> <img className="overlaybodyimg" src="icons/search.svg" /></li>
-                    <li><Link  to="/notifications"> <span className="overlaybodyitems">NOTIFICATIONS</span> </Link>  <img className="overlaybodyimg" 
+                    <li onClick={clearnotifications}><Link  to="/notifications"> <span className="overlaybodyitems">NOTIFICATIONS</span> </Link>  <img className="overlaybodyimg" 
                      src="icons/notification.svg" /><span id="nnum">{count}</span></li>
                     <li><Link  to="/profile"> <span className="overlaybodyitems">PROFILE</span>  </Link> <img className="overlaybodyimg"  src="icons/profile.svg" /></li>
                     <li><span className="overlaybodyitems" onClick={onlineoverlay}>ONLINE</span> <img className="overlaybodyimg"  src="icons/online.png" /></li>
@@ -236,14 +241,14 @@ const Home = () => {
                     <Message key={message._id} message={message} own={message.sender === user._id} />
                     </div>
                 ))}
-            </div>
-            <div className="chatBoxBottom">
+                 <div className="chatBoxBottom">
                   <textarea className="chatMessageInput" placeholder="HI THERE" 
                    value={newMessage} onChange={(e)=>setnewMessage(e.target.value)} ></textarea>
                   <button onClick={createMessage} className="chatSubmitButton">
                     Send
                   </button>
-                </div>
+             </div>
+            </div>
             </div>
             <div ref={rightRef} className="hright">
             <span id="hrighttxt">online</span>

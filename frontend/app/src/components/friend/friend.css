@@ -4,6 +4,12 @@
     margin-top: 4rem;
     margin-left: 1rem;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.friendscont:hover{
+    background-color: rgb(152, 190, 161);
 }
 
 .friendimg, #picalt {

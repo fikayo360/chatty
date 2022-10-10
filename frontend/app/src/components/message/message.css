@@ -44,10 +44,26 @@ margin-left: 13rem;
     }
 
     .message.own .messagetxt{
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .timeago{
         margin-left: 7rem;
+        font-size: 15px;
         }
+}
+
+@media only screen and (max-width: 380px) {
+    .message{
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        margin-left:2rem;
+        margin-bottom: 2rem;
+        padding: 5px;
+    }
+
+    .message.own{
+        margin-left:7.5rem;
+    }
 }

@@ -34,28 +34,31 @@
 
 .top{
     width: 100%;
-    height: 80%;
+    height: 100%;
     padding-top: 20px;
     overflow: auto;
-    background-color: rgb(201, 201, 213);
+    background-color: rgba(231, 235, 234, 0.724);
+    position: relative;
 }
 
 
 .chatBoxBottom {
+  position: absolute;
     display: flex;
     width:100%;
     height: 20%;
-    background-color: #ffff;
+    background-color: rgba(255, 255, 255, 0.44);
     padding-top: 10px;
+    bottom: 0;
   }
   
   
   .chatMessageInput {
     width: 65%;
-    height: 30px;
+    height: 50px;
     padding: 10px;
     border-radius: 8px;
-    margin-left:40px;
+    margin-left:50px;
   }
 
   .chatMessageInput::placeholder{
@@ -64,7 +67,7 @@
   
   .chatSubmitButton {
     width: 100px;
-    height: 50px;
+    height: 70px;
     border: none;
     font-size: 1.1rem;
     border-radius: 5px;
@@ -309,4 +312,13 @@
 .chatSubmitButton {
   height: 60px;
 }
+}
+
+@media only screen and (max-width: 768px) {
+  .chatBoxBottom {
+    height: 20%;
+  }
+  .chatMessageInput,.chatSubmitButton {
+    margin-bottom: 2rem;
+  }
 }
