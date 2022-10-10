@@ -241,14 +241,14 @@ const Home = () => {
                     <Message key={message._id} message={message} own={message.sender === user._id} />
                     </div>
                 ))}
-                 <div className="chatBoxBottom">
+            </div>
+            <div className="chatBoxBottom">
                   <textarea className="chatMessageInput" placeholder="HI THERE" 
                    value={newMessage} onChange={(e)=>setnewMessage(e.target.value)} ></textarea>
                   <button onClick={createMessage} className="chatSubmitButton">
                     Send
                   </button>
              </div>
-            </div>
             </div>
             <div ref={rightRef} className="hright">
             <span id="hrighttxt">online</span>
